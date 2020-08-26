@@ -152,7 +152,7 @@
 				// apply fog
 				UNITY_APPLY_FOG(i.fogCoord, col);
 
-				float angle = atan2(distance(i.worldPos, _CubePos), distance(i.worldPos, _GazeOri)) * 57.2974;
+				float angle = atan2(distance(i.worldPos, _CubePos), distance(i.worldPos, _GazeOri)) * 57.297;
 				//gaussian scaling
 				float probability = exp(-2.7727 * angle * angle)/135;
 				float3 hsv = rgb2hsv(float3(col.r, col.g, col.b));
