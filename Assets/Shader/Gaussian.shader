@@ -154,7 +154,7 @@
 
 				float angle = atan2(distance(i.worldPos, _CubePos), distance(i.worldPos, _GazeOri)) * 57.2974;
 				//gaussian scaling
-				float probability = exp(-2.7727 * angle * angle)/90;
+				float probability = exp(-2.7727 * angle * angle)/135;
 				float3 hsv = rgb2hsv(float3(col.r, col.g, col.b));
 				float h = hsv.y == 0 ? 0.66 - probability : hsv.x - probability < 0 ? 0 : hsv.x - probability;
 				return angle < 2.5 ? float4(hsv2rgb(float3(h, 1, 1)), 1) : col;
